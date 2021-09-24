@@ -1,4 +1,0 @@
-PollServiceTest.java
- PollServiceTest
-WebServicesTest.java
- WebServicesTest
