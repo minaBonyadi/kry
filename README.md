@@ -29,4 +29,21 @@ This application including this five services Api:
  - /service/update
  - /service/delete
 
-All of them have their own test in test directory. Polling service run with user fairness mechanism, On the other word, for each users I get just a service to check the health of it ,so if I have two users which one of them have 100 services but the other one just have a service to check ,this system behave fairness between these two users services.  
+All of them have their own test in test directory.
+
+First, Polling service "poll/health-check" put the services of each users on blocking queue in a thread and, then the other thread run scheduling evere 15 seconds to take from this queue. After that, call the web service with given url.Finally, If get web service can call successfully the web service status gonna be OK or else Fail.
+----------
+Second, service "service/get/{serviceId}" can get web service with it's id and send it to the client.
+----------
+Third this web service "service/create/{userId}" can help us to create a new service related to current user.
+-----------
+Forth this web service "service/update" can help us to update an exists service.
+----------
+Fifth this web service "service/delete" can help us to delete an exists service.
+----------
+
+
+
+
+
+
