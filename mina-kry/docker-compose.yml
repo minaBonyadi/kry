@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_PASSWORD: pass 
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_ROOT_USER: kry
+      MYSQL_USER: kry
+      MYSQL_DATABASE: kry
+    ports:
+      - "3307:3306"
