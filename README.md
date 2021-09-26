@@ -31,16 +31,16 @@ This application including this five services Api:
 
 All of them have their own test in test directory.
 
-First, Polling service "poll/health-check" put the services of each users on blocking queue in a thread and, then the other thread run scheduling evere 15 seconds to take from this queue. After that, call the web service with given url.Finally, If get web service can call successfully the web service status gonna be OK or else Fail.
-----------
-Second, service "service/get/{serviceId}" can get web service with it's id and send it to the client.
-----------
-Third this web service "service/create/{userId}" can help us to create a new service related to current user.
------------
-Forth this web service "service/update" can help us to update an exists service.
-----------
-Fifth this web service "service/delete" can help us to delete an exists service.
-----------
+1) First, Polling service "poll/health-check" put the services of each users on blocking queue in a thread and, then the other thread run scheduling evere 15 seconds to take from this queue. After that, call the web service with given url.Finally, If get web service can call successfully the web service status gonna be OK or else Fail.
+
+2) Second, service "service/get/{serviceId}" can get web service with it's id and send it to the client.
+
+3) Third this web service "service/create/{userId}" can help us to create a new service related to current user.
+
+4) Forth this web service "service/update" can help us to update an exists service.
+
+5) Fifth this web service "service/delete" can help us to delete an exists service.
+
 
 
 
