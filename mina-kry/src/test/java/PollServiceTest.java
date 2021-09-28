@@ -155,7 +155,7 @@ public class PollServiceTest {
         Thread thread2 = new Thread(() -> pollService.callShutdownSignal());
         thread2.start();
 
-        await("wait_for_response_1").atMost(50, TimeUnit.SECONDS)
+        await("wait_for_response_3").atMost(50, TimeUnit.SECONDS)
                 .untilAsserted(() -> assertThat(thread2.getState()).isEqualTo(Thread.State.TERMINATED));
     }
 }
